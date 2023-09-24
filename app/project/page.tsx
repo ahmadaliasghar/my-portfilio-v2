@@ -6,7 +6,7 @@ import type { ProjectType, ProjectsType } from "../../types";
 export default async function Project() {
   const projects: ProjectType[] = await getProjects();
   console.log("🚀 ~ file: page.tsx:8 ~ Project ~ projects:", projects)
-  const project: ProjectType[] = await getSingleProject("e-commerce-store");
+  // const project: ProjectType[] = await getSingleProject("e-commerce-store");
   // console.log("🚀 ~ file: page.tsx:10 ~ Project ~ project:", project)
 
   return (

@@ -28,10 +28,16 @@ export type JobType = {
     endDate: Date;
   };
 
+  interface Slug {
+    slug: {
+      current: string
+    }
+  }
+
   export type ProjectType = {
     _id: string;
     name: string;
-    slug: object;
+    slug: Slug;
     tagline: string;
     projectUrl: string;
     logo: string;
