@@ -40,7 +40,7 @@ export async function getJob() {
         _id, 
         name,
         tagline,
-        "slug": slug,
+        "slug": slug.current,
         "logo": logo.asset->url,
         coverImage { alt, "image": asset->url },
       }`

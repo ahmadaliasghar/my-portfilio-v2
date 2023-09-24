@@ -37,7 +37,7 @@ export type JobType = {
   export type ProjectType = {
     _id: string;
     name: string;
-    slug: Slug;
+    slug: string;
     tagline: string;
     projectUrl: string;
     logo: string;
