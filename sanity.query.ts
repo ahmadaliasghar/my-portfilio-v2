@@ -39,9 +39,10 @@ export async function getJob() {
       groq`*[_type == "project"]{
         _id, 
         name,
-        "slug": slug.current,
         tagline,
+        "slug": slug,
         "logo": logo.asset->url,
+        coverImage { alt, "image": asset->url },
       }`
     );
   }

@@ -41,3 +41,17 @@ export type JobType = {
     };
     description: PortableTextBlock[];
   };
+  export type ProjectsType = {
+    _id: string;
+    name: string;
+    slug: string;
+    tagline: string;
+    // projectUrl: string;
+    logo: string;
+    
+    // coverImage: {
+    //   alt: string | null;
+    //   image: string;
+    // };
+    // description: PortableTextBlock[];
+  };

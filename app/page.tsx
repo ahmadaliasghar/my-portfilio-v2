@@ -1,7 +1,7 @@
 import { getProfile } from "../sanity.query";
 import type { ProfileType } from "../types";
-import HeroSvg from "../components/icons/HeroSvg";import Job from "@/components/Job";
-;
+import HeroSvg from "../components/icons/HeroSvg";
+import Job from "@/components/Job";
 
 export default async function Home() {
   const profile: ProfileType[] = await getProfile();

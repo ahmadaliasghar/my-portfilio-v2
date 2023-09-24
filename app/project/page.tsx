@@ -1,10 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getProjects } from "../../sanity.query";
-import type { ProjectType } from "@/types";
+import { getProjects, getSingleProject } from "../../sanity.query";
+import type { ProjectType, ProjectsType } from "../../types";
 
 export default async function Project() {
   const projects: ProjectType[] = await getProjects();
+  console.log("🚀 ~ file: page.tsx:8 ~ Project ~ projects:", projects)
+  const project: ProjectType[] = await getSingleProject("e-commerce-store");
+  // console.log("🚀 ~ file: page.tsx:10 ~ Project ~ project:", project)
 
   return (
     <main className="max-w-7xl mx-auto md:px-16 px-6">
@@ -24,7 +27,7 @@ export default async function Project() {
       <section className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mb-12">
         {projects.map((project) => (
           <Link
-            href={`/projects/${project.slug}`}
+            href={`/projects/${project.slug.current}`}
             key={project._id}
             className="flex items-center gap-x-4 bg-[#1d1d20] border border-transparent hover:border-zinc-700 p-4 rounded-lg ease-in-out"
           >
